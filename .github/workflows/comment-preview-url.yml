@@ -1,9 +1,11 @@
-# .github/workflows/comment-preview-url.yml
 name: Comment Preview URL
 
 on:
   pull_request:
     types: [opened, synchronize]
+
+permissions:
+  pull-requests: write  # Add this to grant write permissions to pull requests
 
 jobs:
   comment:
