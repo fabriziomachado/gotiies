@@ -17,7 +17,7 @@ jobs:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           script: |
             const pr = context.payload.pull_request;
-            const previewUrl = `https://pr-${pr.number}.gotiies.panel.dev.unesc.net`;
+            const previewUrl = `https://${pr.number}.gotiies.panel.dev.unesc.net`;
             github.rest.issues.createComment({
               issue_number: pr.number,
               owner: context.repo.owner,
